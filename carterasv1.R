@@ -1,7 +1,6 @@
 ## Calculadora de retorno de carteras – v2 (fix)
 ## Shiny app – Ricardo Puiggari
 
-```r
 # --------------------------------------------------------------------
 # Paquetes ------------------------------------------------------------
 library(shiny)
@@ -89,8 +88,8 @@ ui <- fluidPage(
       numericInput("tasa_anual","Tasa anual crédito (%):",120,0),
       numericInput("n_cuotas","Número de cuotas:",12,1),
       numericInput("iva_rate",  "Tasa IVA (%):",             21,  min = 0),
-      sliderInput("mora", "Mora esperada (%):", min = 0, max = 10, value = 3, step = 0.1),
-      numericInput("tasa_desc", "Tasa descuento compra (%):", 55,  min = 0),"Tasa descuento compra (%):",55,0),
+      numericInput("mora", "Mora esperada (%):", 3, min = 0, max = 10, step = 0.1),
+      numericInput("tasa_desc", "Tasa descuento compra (%):", 55,  min = 0),
     actionButton("calcular","Calcular",class="btn-primary")
   ),
   mainPanel(
@@ -217,4 +216,3 @@ format_number <- function(x) comma(x,0.01,locale="es")
 # --------------------------------------------------------------------
 # Run -----------------------------------------------------------------
 shinyApp(ui,server)
-```
