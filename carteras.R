@@ -1,7 +1,5 @@
 ## Calculadora de retorno de carteras
-## Shiny app – Ricardo Puiggari (versión con objetivo de IVA y números formateados)
-
-```r
+## Shiny app – Ricardo Puiggari (versión con objetivo de IVA y números formateados)
 # --------------------------------------------------------------------
 # Paquetes ------------------------------------------------------------
 library(shiny)
@@ -196,4 +194,3 @@ format_number <- function(x) comma(x, 0.01, locale = "es")
 # Run -----------------------------------------------------------------
 
 shinyApp(ui, server)
-```
